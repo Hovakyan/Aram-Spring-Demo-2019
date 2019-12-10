@@ -6,7 +6,6 @@ import com.aram.hovakyan.entity.DiagnoseEntity;
 import com.aram.hovakyan.repository.DiagnoseRepository;
 import com.aram.hovakyan.service.diagnose.DiagnosService;
 import com.aram.hovakyan.service.diagnose.convert.DiagnosConverter;
-import com.aram.hovakyan.service.patient.convert.DiagnoseConvert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
