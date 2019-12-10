@@ -12,9 +12,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class DiagnosConverter {
 
+    DiagnoseEntity diagnoseEntity;
     public DiagnoseEntity convert(DiagnoseCreationDTO request) {
 
-        return null;
+        if (DiagnoseType.valueOf(request.getDiagnosName()).name().equals(request.getDiagnosName())){
+
+            diagnoseEntity.setName(request.getDiagnosName());
+        }
+
+        return diagnoseEntity;
     }
 
     public DiagnoseDTO convert(DiagnoseEntity entity) {

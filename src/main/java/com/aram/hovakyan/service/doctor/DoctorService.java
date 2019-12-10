@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 public interface DoctorService {
 
     DoctorDTO get(Long doctorId);
-
     PageImpl<DoctorDTO> all(Pageable pageable);
-
     DoctorDTO create(DoctorCreationDTO request);
 }

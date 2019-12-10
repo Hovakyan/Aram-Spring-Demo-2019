@@ -1,6 +1,8 @@
 package com.aram.hovakyan.api;
 
+import com.aram.hovakyan.common.diagnoses.DiagnoseCreationDTO;
 import com.aram.hovakyan.common.diagnoses.DiagnoseDTO;
+import com.aram.hovakyan.common.diagnoses.DiagnoseUpdateDTO;
 import com.aram.hovakyan.common.doctor.DoctorCreationDTO;
 import com.aram.hovakyan.common.doctor.DoctorUpdateDTO;
 import com.aram.hovakyan.common.enums.DiagnoseType;
@@ -23,10 +25,10 @@ public interface DiagnoseController {
             @PathParam("size") Integer size);
 
     @PostMapping(name = "")
-    DiagnoseDTO create(@RequestBody DoctorCreationDTO request);
+    DiagnoseDTO create(@RequestBody DiagnoseCreationDTO request);
 
     @PutMapping(name = "")
-    DiagnoseDTO update(@RequestBody DoctorUpdateDTO request);
+    DiagnoseDTO update(@RequestBody DiagnoseUpdateDTO request);
 
 
 
