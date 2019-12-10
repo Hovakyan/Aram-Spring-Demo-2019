@@ -7,7 +7,9 @@ import com.aram.hovakyan.common.doctor.DoctorDTO;
 import com.aram.hovakyan.common.enums.DiagnoseType;
 import com.aram.hovakyan.entity.DiagnoseEntity;
 import com.aram.hovakyan.entity.DoctorEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DiagnosConverter {
 
     public DiagnoseEntity convert(DiagnoseCreationDTO request) {

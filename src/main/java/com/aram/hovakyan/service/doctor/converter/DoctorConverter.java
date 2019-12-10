@@ -9,8 +9,9 @@ import org.springframework.stereotype.Component;
 public class DoctorConverter {
 DoctorEntity doctorEntity;
     public DoctorEntity convert(DoctorCreationDTO request){
-        //TODO implement this;
-        return null;
+       doctorEntity.setSurname(request.getDoctorSurname());
+       doctorEntity.setName(request.getDoctorName());
+        return doctorEntity;
     }
 
     public DoctorDTO convert(DoctorEntity entity){
