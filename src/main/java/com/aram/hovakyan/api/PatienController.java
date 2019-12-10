@@ -13,10 +13,8 @@ import javax.websocket.server.PathParam;
 public interface PatienController {
 
 
-
     @GetMapping(name = "/{patientid}")
     PatientDTO get(@PathVariable (name = "patientid") Long patientID);
-
 
 
     @GetMapping(name = "")
