@@ -7,4 +7,12 @@ import lombok.Setter;
 @Setter
 public class DiagnoseCreationDTO {
     private String diagnosName;
+
+    public String getDiagnosName() {
+        return diagnosName;
+    }
+
+    public void setDiagnosName(String diagnosName) {
+        this.diagnosName = diagnosName;
+    }
 }
