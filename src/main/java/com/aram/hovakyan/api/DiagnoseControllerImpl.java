@@ -7,18 +7,21 @@ import com.aram.hovakyan.common.doctor.DoctorCreationDTO;
 import com.aram.hovakyan.common.doctor.DoctorUpdateDTO;
 import com.aram.hovakyan.common.enums.DiagnoseType;
 import com.aram.hovakyan.service.diagnose.DiagnosService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class DiagnoseControllerImpl implements DiagnoseController {
 
-    @Autowired
-    DiagnosService diagnosService;
+
+    private final DiagnosService diagnosService;
+
     @Override
     public DiagnoseDTO get(Long diagnoseId) {
-        return null;
+        return diagnosService.getOne(diagnoseId);
     }
 
     @Override
@@ -28,12 +31,11 @@ public class DiagnoseControllerImpl implements DiagnoseController {
 
     @Override
     public DiagnoseDTO create(DiagnoseCreationDTO request) {
-
         return diagnosService.create(request);
     }
 
     @Override
     public DiagnoseDTO update(DiagnoseUpdateDTO request) {
-        return null;
+        return diagnosService.update(request);
     }
 }

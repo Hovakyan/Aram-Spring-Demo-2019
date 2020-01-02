@@ -1,22 +1,14 @@
 package com.aram.hovakyan.common.patient;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class PatientCreationDTO {
-    private String patientName;
-    private String patientSurName;
+    private Long id;
+    private String name;
+    private String surName;
 
-    public String getPatientSurName() {
-        return patientSurName;
-    }
 
-    public void setPatientSurName(String patientSurName) {
-        this.patientSurName = patientSurName;
-    }
-
-    public String getPatientName() {
-        return patientName;
-    }
-
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
-    }
 }

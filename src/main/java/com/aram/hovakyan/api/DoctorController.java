@@ -17,9 +17,10 @@ public interface DoctorController {
     DoctorDTO get(@PathVariable(name = "doctorId") Long doctorId);
 
     @GetMapping(name = "")
-    PageImpl<DoctorDTO> getAll(@PathParam("page") Integer page, @PathParam("size") Integer size);
+    PageImpl<DoctorDTO> getAll(@PathParam("page") Integer page,
+                               @PathParam("size") Integer size);
 
-    @PostMapping(name = "/{create}")
+    @PostMapping(name = "")
     DoctorDTO create(@RequestBody DoctorCreationDTO request);
 
     @PutMapping(name = "")

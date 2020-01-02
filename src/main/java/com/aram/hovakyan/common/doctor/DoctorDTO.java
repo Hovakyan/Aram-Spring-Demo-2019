@@ -7,4 +7,8 @@ import lombok.Setter;
 @Setter
 public class DoctorDTO {
 
+    private Long id;
+    private String name;
+    private String surname;
+
 }

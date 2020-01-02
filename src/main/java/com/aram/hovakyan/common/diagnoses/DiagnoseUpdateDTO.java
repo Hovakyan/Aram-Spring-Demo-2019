@@ -1,18 +1,13 @@
 package com.aram.hovakyan.common.diagnoses;
 
+import com.aram.hovakyan.common.enums.DiagnoseType;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 public class DiagnoseUpdateDTO {
-    private String diagnosName;
-
-    public String getDiagnosName() {
-        return diagnosName;
-    }
-
-    public void setDiagnosName(String diagnosName) {
-        this.diagnosName = diagnosName;
-    }
+    private Long id;
+    private String name;
+    private DiagnoseType type;
 }

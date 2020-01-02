@@ -1,5 +1,12 @@
 package com.aram.hovakyan.common.patient;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class PatientUpdateDTO {
-    private String patientName;
+    private Long id;
+    private String name;
+    private String surName;
 }

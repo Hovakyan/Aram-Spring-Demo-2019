@@ -8,13 +8,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DiagnoseDTO {
+    private Long id;
+    private String name;
     private DiagnoseType type;
 
-    public DiagnoseType getType() {
-        return type;
-    }
 
-    public void setType(DiagnoseType type) {
-        this.type = type;
-    }
 }
