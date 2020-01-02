@@ -26,6 +26,6 @@ public class DiagnosConverter {
     public DiagnoseDTO convert(DiagnoseEntity entity) {
         //TODO implemeny this
         return null;
-
+d
     }
 }
