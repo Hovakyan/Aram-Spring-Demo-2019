@@ -18,14 +18,13 @@ public interface PatienController {
 
 
     @GetMapping(name = "")
-    PageImpl<PatientDTO> getAll(
-            @PathParam("page") Integer page, @PathParam("size") Integer size);
+    PageImpl<PatientDTO> getAll(@PathParam("page") Integer page, @PathParam("size") Integer size);
 
 
     @PostMapping(name = "/create")
     PatientDTO create(@RequestBody PatientCreationDTO request);
 
-    @PostMapping(name = "/update")
+    @PutMapping(name = "/update")
     PatientDTO update(@RequestBody PatientUpdateDTO request);
 
 }

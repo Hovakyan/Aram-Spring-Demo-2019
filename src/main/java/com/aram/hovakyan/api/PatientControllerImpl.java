@@ -25,7 +25,7 @@ public class PatientControllerImpl implements PatienController {
     }
 
     @Override
-    public PatientDTO create(PatientCreationDTO request) {
+    public PatientDTO create(final PatientCreationDTO request) {
         return patientService.create(request);
     }
 
