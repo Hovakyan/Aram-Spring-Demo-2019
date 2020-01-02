@@ -21,4 +21,10 @@ public class PatientEntity extends AbstractEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doctor_id")
    public DoctorEntity doctorEntity;
+
+
+    @OneToOne(mappedBy = "patientEntity",orphanRemoval = true)
+    public DiagnoseEntity diagnoseEntities;
+
+
 }

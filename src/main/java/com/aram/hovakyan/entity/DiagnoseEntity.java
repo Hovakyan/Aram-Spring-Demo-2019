@@ -1,6 +1,7 @@
 package com.aram.hovakyan.entity;
 
 import com.aram.hovakyan.common.enums.DiagnoseType;
+import com.aram.hovakyan.common.patient.PatientDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,12 @@ public class DiagnoseEntity extends AbstractEntity {
     private String name;
     @Column(nullable = false)
     private DiagnoseType diagnoseType;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @MapsId
+    @JoinColumn(name = "patient_id")
+    private PatientEntity patientEntity;
+
 
 
 }

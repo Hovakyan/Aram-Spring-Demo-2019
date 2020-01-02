@@ -6,8 +6,8 @@ import lombok.Getter;
 
 @Getter
 public enum DiagnoseType {
-    FATAL("f"),
-    CURABLE("s");
+    FATAL("FATAL"),
+    CURABLE("CURABLE");
 
     DiagnoseType(String text) {
         this.text = text;

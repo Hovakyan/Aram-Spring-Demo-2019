@@ -8,7 +8,9 @@ import com.aram.hovakyan.common.doctor.DoctorDTO;
 import com.aram.hovakyan.common.enums.DiagnoseType;
 import com.aram.hovakyan.entity.DiagnoseEntity;
 import com.aram.hovakyan.entity.DoctorEntity;
+import com.aram.hovakyan.entity.PatientEntity;
 import com.aram.hovakyan.repository.DiagnoseRepository;
+import com.aram.hovakyan.repository.PatientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -17,11 +19,15 @@ import org.springframework.stereotype.Component;
 public class DiagnosConverter {
 
     private final DiagnoseRepository diagnoseRepository;
+    private final PatientRepository patientRepository;
 
     public DiagnoseEntity convertDTOToEntity(DiagnoseCreationDTO request) {
+        PatientEntity patientEntity = patientRepository.getOne(request.getId());
+
         DiagnoseEntity diagnoseEntity = new DiagnoseEntity();
         diagnoseEntity.setName(request.getName());
-        diagnoseEntity.setDiagnoseType(diagnoseEntity.getDiagnoseType());
+        diagnoseEntity.setDiagnoseType(request.getType());
+        diagnoseEntity.setPatientEntity(patientEntity);
         return diagnoseEntity;
     }
 
