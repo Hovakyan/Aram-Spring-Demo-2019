@@ -1,5 +1,6 @@
 package com.aram.hovakyan.service.patient.convert;
 
+import com.aram.hovakyan.common.doctor.DoctorDTO;
 import com.aram.hovakyan.common.patient.PatientCreationDTO;
 import com.aram.hovakyan.common.patient.PatientDTO;
 import com.aram.hovakyan.entity.DoctorEntity;
@@ -40,10 +41,9 @@ public class PatientConvert {
     }
 
 
+    public List<PatientDTO> convert(Page<PatientEntity> request) {
+        return request.stream().map(this::convertEntityToDTO).collect(Collectors.toList());
+    }
 
 
-//    public PageImpl<PatientDTO> convert(final Page<PatientDTO> request) {
-//        return new PageImpl<>( request.getPageable(),
-//                request.getContent().size());
-//    }
 }

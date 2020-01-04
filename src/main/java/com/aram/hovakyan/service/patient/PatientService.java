@@ -2,6 +2,7 @@ package com.aram.hovakyan.service.patient;
 
 import com.aram.hovakyan.common.patient.PatientCreationDTO;
 import com.aram.hovakyan.common.patient.PatientDTO;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 public interface PatientService {
 
     PatientDTO create(PatientCreationDTO request);
-    PageImpl<PatientDTO> getAll(Pageable pageable);
+    PageImpl<PatientDTO> getAll(Long id, Pageable pageable);
+
 
 }
