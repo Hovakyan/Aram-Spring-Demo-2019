@@ -3,7 +3,11 @@ package com.aram.hovakyan.service.doctor.converter;
 import com.aram.hovakyan.common.doctor.DoctorCreationDTO;
 import com.aram.hovakyan.common.doctor.DoctorDTO;
 import com.aram.hovakyan.entity.DoctorEntity;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class DoctorConverter {
@@ -22,4 +26,9 @@ public class DoctorConverter {
         doctorDTO.setSurname(entity.getSurname());
         return doctorDTO;
     }
+
+    public List<DoctorDTO> convert(Page<DoctorEntity> request) {
+        return request.stream().map(this::convertEntityToDTO).collect(Collectors.toList());
+    }
+
 }

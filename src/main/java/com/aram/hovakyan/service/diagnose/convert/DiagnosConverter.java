@@ -27,6 +27,7 @@ public class DiagnosConverter {
         DiagnoseEntity diagnoseEntity = new DiagnoseEntity();
         diagnoseEntity.setName(request.getName());
         diagnoseEntity.setDiagnoseType(request.getType());
+
         diagnoseEntity.setPatientEntity(patientEntity);
         return diagnoseEntity;
     }

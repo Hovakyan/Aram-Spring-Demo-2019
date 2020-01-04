@@ -25,5 +25,4 @@ public class DiagnoseEntity extends AbstractEntity {
     private PatientEntity patientEntity;
 
 
-
 }

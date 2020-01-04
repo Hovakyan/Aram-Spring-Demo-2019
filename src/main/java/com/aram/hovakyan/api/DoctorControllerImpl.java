@@ -24,7 +24,9 @@ public class DoctorControllerImpl implements DoctorController{
 
     @Override
     public PageImpl<DoctorDTO> getAll(Integer page, Integer size) {
-        return null;
+
+
+        return doctorService.all(getPageable(page,size));
     }
 
     @Override

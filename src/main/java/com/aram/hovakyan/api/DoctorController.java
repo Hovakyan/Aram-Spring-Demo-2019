@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.websocket.server.PathParam;
 
 @RequestMapping(value = "/doctors")
-public interface DoctorController {
+public interface DoctorController extends BaseController{
 
     @GetMapping(value = "/{doctorId}")
     DoctorDTO get(@PathVariable(name = "doctorId") Long doctorId);
