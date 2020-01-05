@@ -16,6 +16,7 @@ public class DiagnoseEntity extends AbstractEntity {
 
     @Column(nullable = false,length = 300)
     private String name;
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private DiagnoseType diagnoseType;
 
