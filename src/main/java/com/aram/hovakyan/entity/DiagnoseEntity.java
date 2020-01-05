@@ -1,7 +1,6 @@
 package com.aram.hovakyan.entity;
 
 import com.aram.hovakyan.common.enums.DiagnoseType;
-import com.aram.hovakyan.common.patient.PatientDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +10,8 @@ import javax.persistence.*;
 @Table(name = "diagnose_table")
 @Getter
 @Setter
+
+
 public class DiagnoseEntity extends AbstractEntity {
 
 
