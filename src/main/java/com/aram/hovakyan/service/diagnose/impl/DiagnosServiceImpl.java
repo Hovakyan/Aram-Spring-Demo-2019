@@ -29,6 +29,7 @@ public class DiagnosServiceImpl implements DiagnosService {
     @Override
     public DiagnoseDTO getOne(Long id) {
         DiagnoseEntity diagnoseEntity = diagnoseRepository.getOne(id);
+
         return diagnosConverter.convertEntityToDTO(diagnoseEntity);
     }
 

@@ -38,4 +38,11 @@ public class DoctorControllerImpl implements DoctorController{
     public DoctorDTO update(DoctorUpdateDTO request) {
         return null;
     }
+
+    @Override
+    public DoctorDTO getDocbyPatID(Long id) {
+
+
+        return doctorService.getdoctorbtpatientid(id);
+    }
 }

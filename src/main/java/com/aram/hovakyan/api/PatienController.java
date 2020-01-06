@@ -32,6 +32,9 @@ public interface PatienController extends BaseController {
     List<PatientDTO> getdocid(@PathVariable("id") Long id);
 
 
+
+
+
     @PostMapping(name = "")
     PatientDTO create(@RequestBody PatientCreationDTO request);
 

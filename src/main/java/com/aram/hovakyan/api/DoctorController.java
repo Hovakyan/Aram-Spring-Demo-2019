@@ -26,5 +26,8 @@ public interface DoctorController extends BaseController{
     @PutMapping(name = "")
     DoctorDTO update(@RequestBody DoctorUpdateDTO request);
 
+    @GetMapping(value = "patient/{patientID}")
+    DoctorDTO getDocbyPatID(@PathVariable (name = "patientID") Long id);
+
 }
 
